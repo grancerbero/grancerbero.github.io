@@ -25,6 +25,17 @@
         <li>git merge style (ubicandose en main)</li>
         <li>git push origin style</li>
     </ul>
+    <h1>GIT- i have a  directory in my local computer , and i want this to  github</h1>
+    <ul>
+        <li> echo "# django" >> README.md</li>
+        <li>git init</li>
+        <li>git add .</li>
+        <li>git add README.md</li>
+        <li>git commit -m "first commit"</li>
+        <li>git branch -M main</li>
+        <li>git remote add origin https://github.com/grancerbero/django.git</li>
+        <li>git push -u origin main</li>
+    </ul>
 
     <h1>Python</h1>
     <h2>Instalacion en ubuntu</h2>
@@ -44,12 +55,50 @@
     <br>python3 manage.py  startapp hello  <em>crea un api</em>
     <br>python3 manage.py  migrate  <em> en Django se utiliza para aplicar las migraciones pendientes a la base de datos. Las migraciones son una forma de gestionar los cambios en la estructura de la base de datos a lo largo del tiempo. Este comando específico realiza las siguientes acciones:</em>
     
-    <br>
+    <h1>exploring objects in Django</h1>
+    <br>   python3 manage.py shell
+    <br>from flights.models import *
+    <br> flights = Flight.objects.all()
 
 
-
-
-
+    <br># Importar modelos y bibliotecas necesarias
+    <br>from miapp.models import MiModelo, OtroModelo
+    <br>from django.db.models import Q
+    
+    <br># Crear un objeto
+    <br>objeto = MiModelo(nombre="Ejemplo", descripcion="Descripción de ejemplo")
+    <br>objeto.save()
+    
+    <br># Consultar objetos
+    <br>todos_los_objetos = MiModelo.objects.all()
+    <br>objeto_especifico = MiModelo.objects.get(id=1)
+    <br>objetos_filtrados = MiModelo.objects.filter(nombre__icontains="ejemplo")
+    
+    <br># Actualizar un objeto
+    <br>objeto = MiModelo.objects.get(id=1)
+    <br>objeto.nombre = "Nuevo nombre"
+    <br>objeto.save()
+    
+    <br># Eliminar un objeto
+    <br>objeto = MiModelo.objects.get(id=1)
+    <br>objeto.delete()
+    
+    <br># Relaciones entre objetos
+    <br>objeto1 = MiModelo.objects.get(id=1)
+    <br>objeto2 = OtroModelo.objects.get(id=2)
+    <br>objeto1.relacion = objeto2
+    <br>objeto1.save()
+    
+    <br># Consultas avanzadas
+    <br>objetos_complejos = MiModelo.objects.filter(Q(nombre__icontains="ejemplo") | Q(descripcion__icontains="ejemplo"))
+    
+    <br># Operaciones en masa
+    <br>MiModelo.objects.update(descripcion="Nueva descripción para todos")
+    
+    <br># Acceder a campos relacionados
+    <br>objeto = MiModelo.objects.get(id=1)
+    <br>relacion_objeto = objeto.relacion_modelo  # Reemplaza 'relacion_modelo' con el nombre de tu campo de relación
+    
 
 
 </body>
