@@ -137,5 +137,73 @@
     <li> Babel es un compilador de JavaScript que se utiliza para transformar código JavaScript moderno y JSX en un formato compatible con los navegadores.</li>
     </ul>
 
+    <h1>LOAD BALANCING METHODS</h1>
+    <ul>
+        <li>Random choice</li>
+        <li>Round robin</li>
+        <li>fewest connections</li>
+    </ul>
+
+    <h1>SESSION-AWARE LOAD BALANCING </h1>
+    <ul>
+        <li>Sticky Sessions</li>
+        <li>Sessions in database</li>
+        <li>Client-Side Sessions</li>
+    </ul>
+
+    <h1>AUTOSCALLING</h1>
+    <P>El término "autoscaling" en el contexto de un balanceador de cargas se refiere a la capacidad del sistema para ajustar automáticamente la cantidad de recursos (como instancias de servidor) en respuesta a cambios en la carga de trabajo. El autoscaling es una técnica utilizada para garantizar que el sistema pueda manejar eficientemente tanto picos de tráfico como periodos de baja demanda, optimizando así el rendimiento y la utilización de recursos.<BR/>
+
+    Cuando se implementa autoscaling en conjunción con un balanceador de cargas, la idea es aumentar o disminuir dinámicamente la cantidad de instancias de servidor disponibles según sea necesario para manejar la carga actual. Aquí hay algunos conceptos clave asociados con autoscaling y balanceo de cargas:<BR/>
+    
+    --Escalado automático hacia arriba (Upscaling): Cuando la carga de trabajo aumenta, el sistema puede agregar automáticamente nuevas instancias de servidor para distribuir la carga de manera más equitativa. El balanceador de cargas se encarga de dirigir las solicitudes entrantes a las instancias disponibles.<BR/>
+    
+    --Escalado automático hacia abajo (Downscaling): Cuando la carga de trabajo disminuye, el sistema puede eliminar instancias de servidor para ahorrar recursos. El balanceador de cargas ajusta dinámicamente sus configuraciones para dirigir las solicitudes solo a las instancias que están activas.<BR/><BR/>
+    
+    Políticas de escalado: Se definen reglas y políticas para determinar cuándo y cuánto escalar. Estas reglas pueden basarse en métricas como el uso de la CPU, la memoria, la cantidad de solicitudes entrantes, entre otros.<BR/><BR/>
+    
+    Monitoreo continuo: El sistema de autoscaling monitorea constantemente el rendimiento y la carga del sistema para tomar decisiones informadas sobre cuándo y cómo escalar.<BR/><BR/>
+    
+    Al implementar autoscaling junto con un balanceador de cargas, se logra una mayor flexibilidad y eficiencia en la gestión de recursos, ya que el sistema puede adaptarse automáticamente a cambios en la demanda de la aplicación sin intervención manual. Esto es especialmente beneficioso en entornos dinámicos donde la carga de trabajo varía a lo largo del tiempo<BR/><BR/>
+    </P>
+
+    <h1>SCALING DATABASES</h1>
+    <ul>
+        <li>Database partition</li>
+        <li>Database replication</li>
+        <li>
+
+        
+            <ul>
+                <li>Single-primary replication</li>
+                <li>Multi-primary replication</li>
+                <li>Caching: cache-control: max-age=86400 | ETag : "7477656E4796569676874" </li>
+
+
+            </ul>
+        </li>
+    </ul>
+
+    <h1>DJANGO CACHE FRAMEWORK</h1>
+    <ul>
+        <li>Per-view caching</li>
+        <li>Template  fragment caching</li>
+        <li>Low level cache API</li>
+    </ul>
+
+
+    <h1>API Keys</h1>
+    <ul>
+        <li>Rate limiting</li>
+        <li>Route authentication</li>
+    </ul>
+
+    <h1>Cross-Site Scripting</h1>
+    <ul>
+        <li>"Cross-Site Scripting" (XSS) es una vulnerabilidad de seguridad que afecta a las aplicaciones web. Se produce cuando un atacante logra inyectar scripts maliciosos (código JavaScript, por lo general) en páginas web vistas por otros usuarios. El atacante utiliza la confianza que un sitio web tiene en el usuario para ejecutar scripts en su navegador web.</li>
+        <li></li>
+    </ul>
+
+
 </body>
 </html>
