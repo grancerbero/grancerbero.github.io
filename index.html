@@ -102,6 +102,45 @@
     <br># Acceder a campos relacionados
     <br>objeto = MiModelo.objects.get(id=1)
     <br>relacion_objeto = objeto.relacion_modelo  # Reemplaza 'relacion_modelo' con el nombre de tu campo de relación
+
+    <br>Test de serializacion de un objeto1
+    <br>hejurado@HJS:~/proyectos/pythoncourse/airline$ python3 manage.py shell
+    <br>Python 3.10.12 (main, Nov 20 2023, 15:14:05) [GCC 11.4.0]
+    <br>Type 'copyright', 'credits' or 'license' for more information
+    <br>IPython 8.20.0 -- An enhanced Interactive Python. Type '?' for help.
+    
+    <br>In [1]: from flights.models import *
+    
+    <br>In [2]: from flights.serializers import FlightSerializer
+    
+    <br>In [3]: flight = Flight.objects.first()
+    
+    <br>In [4]: flight.duration
+    <br>Out[4]: 415
+    
+    <br>In [5]: flight
+    <br>Out[5]: <Flight: 1:New York:JFK  to London:LHR  : state False>
+    
+    <br>In [6]: serializer = FlightSerializer(flight)
+    
+    <br>In [7]: serializer
+    <br>Out[7]:
+    <br>FlightSerializer(<Flight: 1:New York:JFK  to London:LHR  : state False>):
+        <br>        origin = AirPortSerializer():
+        <br>        code = CharField()
+        <br>        city = CharField()
+        <br>destination = AirPortSerializer():
+        <br>    code = CharField()
+        <br>    city = CharField()
+        <br>duration = IntegerField()
+    
+    <br>In [8]: serializer.data
+    <br>Out[8]: {'origin': OrderedDict([('code', 'JFK'), ('city', 'New York')]), 'destination': OrderedDict([('code', 'LHR'), ('city', 'London')]), 'duration': 415}
+    
+    <br>In [9]:
+
+
+
     <hr>
     <h1>JAVASCRIPT</h1>
     <br>querySelector
@@ -203,6 +242,14 @@
         <li>"Cross-Site Scripting" (XSS) es una vulnerabilidad de seguridad que afecta a las aplicaciones web. Se produce cuando un atacante logra inyectar scripts maliciosos (código JavaScript, por lo general) en páginas web vistas por otros usuarios. El atacante utiliza la confianza que un sitio web tiene en el usuario para ejecutar scripts en su navegador web.</li>
         <li></li>
     </ul>
+
+    <h1>Librerias utiles</h1>
+    <ul>
+    <li>httpie</li>
+    <li>C:\Program Files\PostgreSQL\16\scripts>psql -U postgres -d postgres -a -f dump.sql   <em>importar base de datos que esta exportada como sql plain</em></li>
+    </ul>
+
+    
 
 
 </body>
