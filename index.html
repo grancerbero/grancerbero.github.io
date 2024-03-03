@@ -6,7 +6,54 @@
     <title>comandos git </title>
 </head>
 <body>
+    <h1>Arquitectura de una aplicacion</h1>
+
+    <ul>
+        <li>https://roadmap.sh</li>
+        <li>--Monolitica</li>
+        <li>--Distribuida</li>
+        <li>--Hibrida</li>
+        <li>--Orientada a servicios (SOA)</li>
+        <ul>
+            <li>autocontenido (self contained)</li>
+            <li>los servicios son  caja negra para el consumidor</li>
+            <li>representan una actividad de negocio especifica</li>
+        </ul>
+        <ul>
+            <li>web services --una manera de crear una SOA, no es una arq. SOA</li>
+            <li>SOAP (xml) </li>
+            <li>RESTFul HTTP</li>
+            <li>graphQL</li>
+        </ul>
+
+    </ul>
+    
+    <h1>
+        The twelve-factor app -principles
+    </h1>
+    <ul>
+        <li>formas <b>declarativas</b> de configuracion</li>
+        <li> <b> contrato claro</b> con OS</li>
+        <li>listas para <b>lanzar</b> en cualquier momento</li>
+        <li>Minimizar la  <b>diferencia</b> entre entornos de desarrollo </li>
+        <li><b>facil de escalar</b></li>
+
+
+    </ul>
+
+    <ul>
+        <li>Codebase (ej. git, una sola fuente)</li>
+        <li>Dependencias (se deben definir explicitamente en un solo lugar)</li>
+        <li>configuration(ej virtual env, docker)</li>
+    </ul>
+
+
+
+    
     <h1>GIT</h1>
+
+
+
     <ul>
         <li>git clone https://github.com/grancerbero/hello.git</li>
         <li>git status</li>
@@ -249,7 +296,34 @@
     <li>C:\Program Files\PostgreSQL\16\scripts>psql -U postgres -d postgres -a -f dump.sql   <em>importar base de datos que esta exportada como sql plain</em></li>
     </ul>
 
-    
+    <h1>Librerias utiles</h1>
+    <ul>
+        <li>Abre una terminal en tu distribución de Linux.</li>
+        <li>Asegúrate de tener Python y pip instalados en tu sistema. Puedes verificarlo ejecutando los siguientes comandos:
+          <ul>
+            <li><code>python --version</code></li>
+            <li><code>pip --version</code></li>
+          </ul>
+        </li>
+        <li>Si no tienes Python instalado, puedes instalarlo desde el gestor de paquetes de tu distribución. Por ejemplo, en Ubuntu puedes ejecutar:
+          <ul>
+            <li><code>sudo apt update</code></li>
+            <li><code>sudo apt install python3 python3-pip</code></li>
+          </ul>
+        </li>
+        <li>Una vez que tengas Python y pip instalados, puedes instalar JupyterLab ejecutando el siguiente comando:
+          <ul>
+            <li><code>pip install jupyterlab</code></li>
+          </ul>
+        </li>
+        <li>Este comando instalará JupyterLab y todas las dependencias necesarias en tu sistema.</li>
+        <li>Después de la instalación, puedes iniciar JupyterLab ejecutando el siguiente comando en la terminal:
+          <ul>
+            <li><code>jupyter lab</code></li>
+          </ul>
+        </li>
+      </ul>
+
 
 
 </body>
